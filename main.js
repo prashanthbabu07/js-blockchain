@@ -43,7 +43,7 @@ class BlockChain
     constructor()
     {
         this.chain = [this.createGenesisBlock()];
-        this.difficulty = 4;
+        this.difficulty = 2;
         this.pendingTransactions = [];
         this.miningReward = 100;
     }
@@ -53,7 +53,7 @@ class BlockChain
         return new Block(Date.now(), "Genesis Block", "0");
     }
 
-    getLatestBlock()
+    get latestBlock()
     {
         return this.chain[this.chain.length - 1];
     }
@@ -69,7 +69,7 @@ class BlockChain
     minePendingTransactions(miningRewardAddress)
     {
         var block = new Block(Date.now(), this.pendingTransactions);
-        block.previousHash = this.getLatestBlock().hash;
+        block.previousHash = this.latestBlock.hash;
         block.mineBlock(this.difficulty);
         console.log("block successfully mined...");
         this.chain.push(block);
