@@ -60,7 +60,7 @@ class BlockChain
 
     addBlock(newBlock)
     {
-        newBlock.previousHash = this.getLatestBlock().hash;
+        newBlock.previousHash = this.latestBlock.hash;
         // newBlock.hash = newBlock.calculateHash();
         newBlock.mineBlock(this.difficulty);
         this.chain.push(newBlock);
