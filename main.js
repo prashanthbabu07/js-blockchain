@@ -140,17 +140,6 @@ console.log("balance = " + newCoin.getBalance("Prashanth"));
 newCoin.minePendingTransactions("Prashanth");
 console.log("balance = " + newCoin.getBalance("Prashanth"));
 
-
-// console.log("mining block 1...")
-// chilzinCoin.addBlock(new Block("29/05/2018", { amount: 5 }));
-// console.log("mining block 2...")
-// chilzinCoin.addBlock(new Block("29/05/2018", { amount: 15 }));
-
 console.log(JSON.stringify(newCoin, null, 4));
 
 console.log("Is blockchain valid? " + newCoin.isChainValid());
-
-// chilzinCoin.chain[1].data = {amount: 100};
-// chilzinCoin.chain[1].hash =  chilzinCoin.chain[1].calculateHash();
-
-// console.log("Is blockchain valid? " + chilzinCoin.isChainValid());
