@@ -1,2 +1,2 @@
-# JSBlockchain
+# js-blockchain
 Javascript blockchain
