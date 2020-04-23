@@ -43,7 +43,7 @@ class BlockChain
     constructor()
     {
         this.chain = [this.createGenesisBlock()];
-        this.difficulty = 2;
+        this.difficulty = 4;
         this.pendingTransactions = [];
         this.miningReward = 100;
     }
@@ -140,6 +140,6 @@ console.log("balance = " + newCoin.getBalance("Prashanth"));
 newCoin.minePendingTransactions("Prashanth");
 console.log("balance = " + newCoin.getBalance("Prashanth"));
 
-console.log(JSON.stringify(newCoin, null, 4));
+// console.log(JSON.stringify(newCoin, null, 4));
 
 console.log("Is blockchain valid? " + newCoin.isChainValid());
